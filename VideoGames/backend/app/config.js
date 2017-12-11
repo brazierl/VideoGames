@@ -4,20 +4,21 @@ config.app = {};
 config.igdb.path = {};
 config.app.path = {};
 
-config.prod = false;
+config.prod = true;
 
 if(config.prod){
     // https://videogames-brazierl.c9users.io/
     config.app.protocol = 'https';
     config.app.host = 'videogames-brazierl.c9users.io'; 
-    config.app.url = config.app.protocol + '://' + config.app.host;
+    config.app.port = 3000;
 }
 else{
     config.app.protocol = 'http';
     config.app.host = 'localhost';
     config.app.port = 8080;
-    config.app.url = config.app.protocol + '://' + config.app.host + ':' + config.app.port;
 }
+
+config.app.url = config.app.protocol + '://' + config.app.host + ':' + config.app.port;
 
 config.igdb.protocol = 'https';
 config.igdb.host = 'api-2445582011268.apicast.io';
