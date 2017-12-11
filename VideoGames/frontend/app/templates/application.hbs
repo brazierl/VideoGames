@@ -1,0 +1,31 @@
+<div class="ui segment" style="background-color: rgb(222,234,246); color: rgb(46,116,181);">
+  <h1>Video Games Dashboard</h1>
+</div>
+<div class="ui attached stackable inverted menu" style="background-color: rgb(46,116,181);">
+  <a class="item">
+    {{#link-to "index"}}
+      <i class="home icon"></i>Home
+    {{/link-to}}
+  </a>
+  <a class="item">
+    {{#link-to "listing"}}
+      Listing
+    {{/link-to}}
+  </a>
+  <a class="right item">
+    {{#link-to "about"}}
+      About
+    {{/link-to}}
+  </a>
+</div>
+<div class="ui container">
+  <br/>
+  {{outlet}}
+  <br/><br/>
+</div>
+<br>
+<div class="ui padded grid" style="background-color: rgb(222,234,246); color: rgb(46,116,181);">
+  <div class="sixteen wide column" style="text-align: center;">
+    Made by <a target="_blank" href="https://www.linkedin.com/in/louis-brazier/">Louis BRAZIER</a><i class="fire icon"></i> - 2017
+  </div>
+</div>

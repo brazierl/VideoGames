@@ -1,0 +1,48 @@
+<a {{action 'openModal' id}}>
+    <i class="expand icon"></i>
+</a>
+{{#ui-modal name=id class=(concat "detailGame" id) }}
+<div class="header">
+    Details for game "{{model.name}}"
+</div>
+<div class="content">
+    <div class="ui form">
+        <div class="field">
+            <label>Name</label>
+            {{input type="text" cols="50" rows="1" value=model.name readonly="readonly"}}
+        </div>
+        <div class="field">
+            <label>Summary</label>
+            {{textarea value=model.summary cols="50" rows="3" readonly="readonly"}}
+        </div>
+        <div class="field">
+            <label>URL</label>
+            {{input type="text" cols="50" rows="1" value=model.url readonly="readonly"}}
+        </div>
+        {{#if model.imageUrl}}
+        <div class="field">
+            <label>Cover</label>
+            <img class="ui image" src="{{model.imageUrl}}" />
+        </div>
+        {{/if}}
+        <div class="field">
+            <label>Released on</label>
+            {{input type="text" cols="50" rows="1" value=model.releaseDate readonly="readonly"}}
+        </div>
+        <div class="field">
+            <label>Created</label>
+            {{input type="text" cols="50" rows="1" value=model.createdAt readonly="readonly"}}
+        </div>
+        <div class="field">
+            <label>Updated</label>
+            {{input type="text" cols="50" rows="1" value=model.updatedAt readonly="readonly"}}
+        </div>
+    </div>
+</div>
+<br>
+<div class="actions">
+    <div class="ui black deny button">
+        Close
+    </div>
+</div>
+{{/ui-modal}}

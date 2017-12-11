@@ -1,0 +1,34 @@
+<div class="ui list game">
+    <div class="item">
+        <img class="ui image" src="{{game.imageUrl}}"/>
+        <div class="content">
+            <h3>
+                <a target="_blank" href="{{game.url}}">{{game.name}}</a>
+                {{detail-game class="detail-button" model=game}}
+            </h3>
+            <p>
+                <em>
+                    Released on
+                    <span class="date">
+                        {{moment-format game.releaseDate 'YYYY-MM-DD HH:mm'}}:
+                    </span>
+                </em>
+            </p>
+            <p>
+                {{#if game.shortSummary}} {{game.shortSummary}} {{else}} No summary {{/if}}
+            </p>
+            {{#if game.rating}}
+            Rating: 
+            <div class="ui small teal progress rating" id="rating" data-percent="{{ game.rating }}">
+                <div class="bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<br/>
+<script>
+  $(".rating").progress();
+</script>

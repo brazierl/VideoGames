@@ -1,0 +1,10 @@
+<div class="ui action input">
+  {{input type="text" cols="50" rows="1" value = searchbox name="searchbox" id="searchbox" placeholder="Search..."}}
+  <button {{action "search" post on="click" }} id="btn-search" class="ui button">Search</button>
+</div>
+<h2>List of games</h2>
+<div class="ui container games">
+  {{#each model as |game|}}
+  {{view-game game=game}}
+  {{/each}}
+</div>
