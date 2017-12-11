@@ -4,7 +4,7 @@ config.app = {};
 config.igdb.path = {};
 config.app.path = {};
 
-config.prod = true;
+config.prod = false;
 
 if(config.prod){
     // https://videogames-brazierl.c9users.io/
@@ -15,7 +15,7 @@ if(config.prod){
 else{
     config.app.protocol = 'http';
     config.app.host = 'localhost';
-    config.app.port = 8080;
+    config.app.port = 3000;
 }
 
 config.app.url = config.app.protocol + '://' + config.app.host + ':' + config.app.port;
