@@ -13,3 +13,6 @@ The backend is implemented using Node.js which is used as a proxy to retreive da
 ### Frontend
 The frontend is developped using Ember.js, an open-source Javascript web framework with an MVC architecture. 
 Ember use follows the Convention over Configuration principle to simplify implementations.
+
+## Deployment
+The application is deployed on Heroku: https://brazierl-videogames.herokuapp.com
